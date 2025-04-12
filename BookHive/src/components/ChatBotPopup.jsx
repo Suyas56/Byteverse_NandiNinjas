@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import { FaRobot, FaTimes } from 'react-icons/fa';
-import './ChatbotPopup.css';
+import '../ChatBotPopup.css';
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
