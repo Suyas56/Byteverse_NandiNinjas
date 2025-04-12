@@ -19,6 +19,7 @@ import {
   ArcElement,
 } from "chart.js";
 import logo from "../assets/black-logo.png";
+import ChatbotPopup from "./ChatBotPopup";
 
 ChartJS.register(
   CategoryScale,
@@ -120,6 +121,7 @@ const UserDashboard = () => {
             </div>
           </div>
         </div>
+        <ChatbotPopup />
       </main>
     </>
   );
