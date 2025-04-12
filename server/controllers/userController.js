@@ -1,3 +1,4 @@
+import { log } from "console";
 import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import ErrorHandler from "../middlewares/errorMiddlewares.js";
 import { User } from "../models/userModel.js";
@@ -50,6 +51,7 @@ export const registerNewAdmin = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler("Failed to upload avatar image to cloudinary.", 500)
     );
   }
+  
   const admin = await User.create({
     name,
     email,
@@ -61,6 +63,7 @@ export const registerNewAdmin = catchAsyncErrors(async (req, res, next) => {
       url: cloudinaryResponse.secure_url,
     },
   });
+  
   res.status(201).json({
     success: true,
     message: "Admin registered successfully.",
