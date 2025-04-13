@@ -1,4 +1,4 @@
-# 📚 BookHive Manager
+# 📚  BookHive Manager - E-Library Management System
 
 BookHive Manager is an E-Library Management System developed during a hackathon by the **NandiNinjas** team. It provides a robust platform for managing books, borrowing/returning books, handling Previous Year Questions (PYQs), and sending email notifications. The system is designed for both users and administrators, offering distinct functionalities for each role.
 
