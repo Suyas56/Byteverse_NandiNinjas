@@ -9,6 +9,8 @@ import BookManagement from "../components/BookManagement";
 import Catalog from "../components/Catalog";
 import MyBorrowedBooks from "../components/MyBorrowedBooks";
 import Users from "../components/Users";
+import PYQManagement from "../components/PYQManagement";
+import MyPYQs from "../components/MyPYQs";
 
 const Home = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
@@ -60,6 +62,20 @@ const Home = () => {
             case "My Borrowed Books":
               return <MyBorrowedBooks />;
               break;
+            
+            //
+            case "ManagePYQs":
+              if (user.role === "Admin") {
+                return <PYQManagement />;
+              }
+              break;
+            case "MyPYQs":
+              if (user.role === "User") {
+                return <MyPYQs />;
+              }
+              break
+
+
             default:
               return user?.role === "User" ? (
                 <UserDashboard />

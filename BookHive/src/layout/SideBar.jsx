@@ -80,6 +80,14 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
               >
                 <img src={usersIcon} alt="icon" /> <span>Users</span>
               </button>
+
+              <button
+                className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
+                onClick={() => setSelectedComponent("ManagePYQs")}
+              >
+                <img src={catalogIcon} alt="icon" /> <span>Manage PYQs</span>
+              </button>
+
               <button
                 className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
                 onClick={() => dispatch(toggleAddNewAdminPopup())}
@@ -90,6 +98,15 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
           )}
           {isAuthenticated && user?.role === "User" && (
             <>
+              {/* Existing User Buttons */}
+
+              <button
+                className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
+                onClick={() => setSelectedComponent("MyPYQs")}
+              >
+                <img src={catalogIcon} alt="icon" /> <span>My PYQs</span>
+              </button>
+
               <button
                 className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
                 onClick={() => setSelectedComponent("My Borrowed Books")}
