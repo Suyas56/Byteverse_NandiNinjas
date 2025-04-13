@@ -7,6 +7,7 @@ import { errorMiddleware } from "./middlewares/errorMiddlewares.js";
 import authRouter from "./routes/authRouter.js";
 import bookRouter from "./routes/bookRouter.js";
 import borrowRouter from "./routes/borrowRouter.js";
+import pyqRouter from "./routes/pyqRouter.js";
 import userRouter from "./routes/userRouter.js";
 import expressFileupload from "express-fileupload";
 import { notifyUsers } from "./services/notifyUsers.js";
@@ -27,6 +28,7 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 app.use(
   expressFileupload({
@@ -39,6 +41,7 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/book", bookRouter);
 app.use("/api/v1/borrow", borrowRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/pyq", pyqRouter);
 
 notifyUsers();
 removeUnverifiedAccounts();

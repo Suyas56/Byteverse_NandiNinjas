@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const popupSlice = createSlice({
   name: "popup",
   initialState: {
@@ -9,6 +8,7 @@ const popupSlice = createSlice({
     recordBookPopup: false,
     returnBookPopup: false,
     addNewAdminPopup: false,
+    addPYQPopup: false, // Add this state
   },
   reducers: {
     toggleSettingPopup(state) {
@@ -29,6 +29,9 @@ const popupSlice = createSlice({
     toggleReturnBookPopup(state) {
       state.returnBookPopup = !state.returnBookPopup;
     },
+    toggleAddPYQPopup(state) { // Add this reducer
+      state.addPYQPopup = !state.addPYQPopup;
+    },
     closeAllPopup(state) {
       state.addBookPopup = false;
       state.addNewAdminPopup = false;
@@ -36,6 +39,7 @@ const popupSlice = createSlice({
       state.recordBookPopup = false;
       state.returnBookPopup = false;
       state.settingPopup = false;
+      state.addPYQPopup = false; // Reset this state
     },
   },
 });
@@ -48,6 +52,7 @@ export const {
   toggleRecordBookPopup,
   toggleReturnBookPopup,
   toggleSettingPopup,
+  toggleAddPYQPopup, // Export the new reducer
 } = popupSlice.actions;
 
 export default popupSlice.reducer;
