@@ -5,7 +5,7 @@ BookHive Manager is an E-Library Management System developed during a hackathon 
 ---
 
 ## 🎥 Demo Video
-[Watch the Demo](https://drive.google.com/file/d/12wIrvABoK2qDNf9B1Qaj22F3kEln-LVP/view?usp=drive_link)
+[Watch the Demo]()
 
 ---
 
